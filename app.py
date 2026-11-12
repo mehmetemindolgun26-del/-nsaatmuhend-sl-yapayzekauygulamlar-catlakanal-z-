@@ -27,7 +27,7 @@ from PIL import Image
 
 # (a) Roboflow Universe'ten seçtiğiniz çatlak tespit modelinin kimliği
 #     (proje/sürüm biçiminde, örn. "wall-crack-detection-abc12/3")
-ROBOFLOW_MODEL_ID = "proje-adi/1"
+ROBOFLOW_MODEL_ID = "crack-of-the-wall/crack-in-the-wall-kmho1"
 
 # (b) Güven eşiği: bu değerin altındaki kutular çatlak sayılmaz (0-1 arası)
 GUVEN_ESIGI = 0.30
@@ -44,12 +44,12 @@ GUVEN_ESIGI = 0.30
 #              detections.xyxy        -> kutu koordinatları [x1, y1, x2, y2]
 #              detections.confidence  -> her kutunun güveni
 # yukseklik, genislik : fotoğrafın piksel boyutu
-def kural_kutu_sayisi(detections, yukseklik, genislik):
+def kural_kutu_sayisi(detections, yukseklik, genislik):1
     """Başlangıç örneği: kutu sayısı / 10 (en çok 1)."""
     return min(len(detections) / 10, 1.0)
 
 
-def kural_alan_orani(detections, yukseklik, genislik):
+def kural_alan_orani(detections, yukseklik, genislik):1
     """Başlangıç örneği: kutu alanları toplamının fotoğraf alanına oranı x 3."""
     if len(detections) == 0:
         return 0.0
