@@ -44,12 +44,12 @@ GUVEN_ESIGI = 0.30
 #              detections.xyxy        -> kutu koordinatları [x1, y1, x2, y2]
 #              detections.confidence  -> her kutunun güveni
 # yukseklik, genislik : fotoğrafın piksel boyutu
-def kural_kutu_sayisi(detections, yukseklik, genislik):1
+def kural_kutu_sayisi(detections, yukseklik, genislik):
     """Başlangıç örneği: kutu sayısı / 10 (en çok 1)."""
     return min(len(detections) / 10, 1.0)
 
 
-def kural_alan_orani(detections, yukseklik, genislik):1
+def kural_alan_orani(detections, yukseklik, genislik):
     """Başlangıç örneği: kutu alanları toplamının fotoğraf alanına oranı x 3."""
     if len(detections) == 0:
         return 0.0
